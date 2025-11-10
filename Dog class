@@ -1,0 +1,35 @@
+# 1. Define the Class
+class Dog:
+    # The __init__ method is the constructor. It runs when a new object is created.
+    # 'self' refers to the specific object being created (e.g., fido or bella).
+    def __init__(self, name, breed):
+        # Initialize attributes (data) for the object
+        self.name = name
+        self.breed = breed
+        self.is_sitting = False
+
+    # 2. Define a Method (a function that belongs to the class)
+    def bark(self):
+        """A method for the dog to bark."""
+        print(f"{self.name} the {self.breed} says: Woof! Woof!")
+
+    # 3. Define a Method that changes an attribute
+    def sit(self):
+        """A method to change the dog's state."""
+        self.is_sitting = True
+        print(f"{self.name} is now sitting down.")
+
+
+# 4. Create Objects (Instances) from the Class
+fido = Dog("Fido", "Golden Retriever")
+bella = Dog("Bella", "Poodle")
+
+# 5. Interact with the Objects (Call Methods and Access Attributes)
+print(f"Meet {fido.name}! They are a {fido.breed}.")
+print(f"Is {bella.name} sitting? {bella.is_sitting}")
+
+# Call the methods
+fido.bark()
+bella.sit()
+
+print(f"Is {bella.name} sitting now? {bella.is_sitting}")
