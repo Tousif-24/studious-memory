@@ -1,0 +1,18 @@
+# 1. Create a list of initial items
+shopping_list = ["Bread", "Milk", "Eggs", "Cheese"]
+print(f"Original List: {shopping_list}\n")
+
+# 2. Add a new item to the end of the list using the .append() method
+new_item = input("What item would you like to add? ")
+shopping_list.append(new_item)
+print(f"\nList after adding '{new_item}': {shopping_list}")
+
+# 3. Remove an item using the .pop() method
+# pop() without an index removes and returns the *last* item
+removed_item = shopping_list.pop()
+print(f"Removed the last item: {removed_item}")
+print(f"List after removing an item: {shopping_list}")
+
+# 4. Count the number of items in the list using len()
+total_items = len(shopping_list)
+print(f"\nThere are now {total_items} items left on the list.")
