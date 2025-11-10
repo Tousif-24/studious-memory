@@ -1,0 +1,23 @@
+FILE_NAME = "my_note.txt"
+content_to_write = "Hello Python! This line was written to a file."
+
+# 1. Writing to a file
+# 'w' mode opens the file for writing. If it exists, it truncates (clears) it.
+# The 'with open(...) as f:' structure ensures the file is automatically closed.
+print(f"--- Writing to {FILE_NAME} ---")
+with open(FILE_NAME, 'w') as file:
+    file.write(content_to_write + "\n") # We add a newline character
+    print("Write successful!")
+
+# 2. Reading from the file
+# 'r' mode opens the file for reading.
+print(f"\n--- Reading from {FILE_NAME} ---")
+try:
+    with open(FILE_NAME, 'r') as file:
+        # The .read() method reads the entire content of the file into a single string
+        file_content = file.read()
+        print("File content:")
+        print(file_content)
+except FileNotFoundError:
+    print(f"Error: The file {FILE_NAME} was not found.")
+
