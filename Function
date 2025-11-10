@@ -1,0 +1,25 @@
+# 1. Define the function using the 'def' keyword
+# It takes two parameters: 'width' and 'height'
+def calculate_area(width, height):
+    """
+    This function takes width and height and returns the area of a rectangle.
+    """
+    area = width * height
+    return area
+
+# 2. Get input from the user (and convert it to a float for decimals)
+try:
+    w = float(input("Enter the width: "))
+    h = float(input("Enter the height: "))
+except ValueError:
+    print("Invalid input. Using default values.")
+    w = 5.0
+    h = 10.0
+
+# 3. Call the function and store the result
+# The values w and h are passed as arguments to the function
+result_area = calculate_area(w, h)
+
+# 4. Print the final result
+print(f"\nThe width is {w} and the height is {h}.")
+print(f"The calculated area is: {result_area}")
