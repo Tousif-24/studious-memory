@@ -1,0 +1,36 @@
+import random
+
+# 1. Setup the Game Variables
+# The computer picks a random integer between 1 and 10 (inclusive)
+SECRET_NUMBER = random.randint(1, 10)
+MAX_TRIES = 3
+tries_left = MAX_TRIES
+is_guessed = False
+
+print("I'm thinking of a number between 1 and 10. You have 3 tries!")
+
+# 2. Main Game Loop (runs as long as the player has tries left AND hasn't guessed)
+while tries_left > 0 and not is_guessed:
+    print(f"\nTries left: {tries_left}")
+    
+    # Get the player's guess
+    try:
+        guess = int(input("Enter your guess: "))
+    except ValueError:
+        print("Please enter a valid whole number!")
+        continue  # Skip the rest of the loop and try again
+
+    # 3. Check the guess using Conditional Logic (if/elif/else)
+    if guess == SECRET_NUMBER:
+        print(f"🥳 Congratulations! You guessed the secret number: {SECRET_NUMBER}!")
+        is_guessed = True  # Set flag to exit the while loop
+    elif guess < SECRET_NUMBER:
+        print("Too low! Try a higher number.")
+        tries_left -= 1  # Decrement tries
+    else: # guess > SECRET_NUMBER
+        print("Too high! Try a lower number.")
+        tries_left -= 1  # Decrement tries
+
+# 4. Game End Check
+if not is_guessed:
+    print(f"\nGame Over! You ran out of tries. The secret number was {SECRET_NUMBER}.")
