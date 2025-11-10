@@ -1,0 +1,32 @@
+# 1. Create a dictionary (using curly braces {})
+# Keys are unique strings (or other immutable types)
+# Values can be any data type (string, int, list, etc.)
+student_profile = {
+    "name": "Alex Johnson",
+    "student_id": 10045,
+    "major": "Computer Science",
+    "gpa": 3.7
+}
+
+print("--- Initial Profile ---")
+print(student_profile)
+
+# 2. Access a value using its key
+# Use square brackets [key] to retrieve the value
+print(f"\nStudent Name: {student_profile['name']}")
+print(f"Current Major: {student_profile['major']}")
+
+# 3. Modify an existing value
+student_profile["gpa"] = 3.85
+print("\nGPA updated!")
+
+# 4. Add a new key-value pair
+student_profile["status"] = "Active"
+print("New status added!")
+
+# 5. Print the final, updated profile
+print("\n--- Final Profile ---")
+# Use a for loop to print all keys and values cleanly
+for key, value in student_profile.items():
+    print(f"{key.upper()}: {value}")
+
