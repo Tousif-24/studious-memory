@@ -1,0 +1,7 @@
+# 4. Add a simple conditional check
+if age >= 18:
+    print("You are an adult.")
+elif age > 0:
+    print("You are a minor.")
+else:
+    print("That's an interesting age!"
