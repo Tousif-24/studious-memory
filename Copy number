@@ -1,0 +1,17 @@
+# Ask the user how high they want to count
+try:
+    # We ask for input and convert it immediately to an integer
+    limit = int(input("How high should I count? Enter a number: "))
+except ValueError:
+    print("Invalid input. Counting up to 5 instead.")
+    limit = 5 # Set a default if the input is not a valid number
+
+print("\nStarting the count!")
+
+# Use a 'for' loop to iterate through the numbers
+# range(1, limit + 1) generates numbers starting at 1 and stopping *before* limit + 1
+# This ensures it includes the 'limit' number itself.
+for number in range(1, limit + 1):
+    print(number)
+
+print("Counting complete!")
